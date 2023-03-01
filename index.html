@@ -12,21 +12,23 @@
     <link rel="icon" type="image/x-icon" href="images/saxophone.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dd5f685953.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/cv-stylesheet.css" />
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script src="function.js"></script>
     <div class="row mx-2 justify-content-center px-5">
-        <!-- SIDE -->
+        <!-- BARRA LATERAL IZQUIERDA -->
         <div class="col-12 col-md-4 blanco px-5">
             <header>
                 <h1>ALEJANDRO MARTÍN TRUCCO</h1>
+                <button type="button" id="noche"><i class="fa-solid fa-moon"></i></button>
+                <button type="button" id="dia"><i class="fa-solid fa-sun"></i></button>
             </header>
             <img class="img-fluid" src="images/mas-buena1.png" alt="Foto de perfil: Retrato de Alejandro Trucco" />
             <p class="breve-descripcion-personal mx-2">
+                <i class="fa-solid fa-comment"></i>
                 <em>"Soy una persona responsable, comprometida, carismatica, con
                     facilidad para las relaciones interpersonales.
                     Considero al trabajo en equipo como camino ideal para la ejecución de cualquier proceso, y al diseño
@@ -35,16 +37,13 @@
             </p>
             <div class="row">
                 <div class="col-4 mx-2">
-                    <img style="width:20px;" src="images/Informacion.png" alt="Icono" />
                 </div>
-                <div class="col">
-                    <h2>INFORMACIÓN</h2>
-                </div>
+                <h3><i class="fa-solid fa-user-large"></i> /INFORMACIÓN</h3>
             </div>
             <ul class="list-group">
                 <li class="list-group-item">Fecha de Nacimiento: 23/11/1990</li>
                 <li class="list-group-item">Santa Fe / Argentina</li>
-                <li class="list-group-item">+5493425202581</li>
+                <li class="list-group-item">+54912345678910</li>
                 <li class="list-group-item">alejandrom.trucco@gmail.com</li>
                 <li class="list-group-item"> Estudio <a href=https://www.instagram.com/frc.arq/
                         title="Estudio de Arquitectura" target="_blank">FRC.ARQ</a></li>
@@ -53,8 +52,7 @@
                 <li class="list-group-item"> Fb <a href="https://www.facebook.com/alemtrucco" title="Facebook"
                         target="_blank">/alemtrucco</a></li>
             </ul>
-            <img width="50px" height="auto" src="images/Educacion.png" alt="Icono" />
-            <h2>EDUCACION</h2>
+            <h3><i class="fa-solid fa-graduation-cap"></i> /EDUCACION</h3>
             <ul class="list-group">
                 <li class="list-group-item">Universidad Nacional del Litoral</li>
                 <li class="list-group-item">Arquitectura</li>
@@ -63,28 +61,37 @@
                 <li class="list-group-item">Modalidad Biológico</li>
                 <li class="list-group-item">Egresado 2008</li>
             </ul>
-            <p class="my-5">El que <em>la hace</em> se olvida, el que la recibe <strong>nunca.</strong></p>
+            <h3><i class="fa-solid fa-paper-plane"></i> /CONTÁCTO</h3>
+            <form action="/action_page.php" target="_blank">
+                <label for="fname"></label><br>
+                <input type="text" id="fname" name="fname" placeholder="Nombre y Apellido"><br>
+                <label for="Email"></label><br>
+                <input type="text" id="email" name="email" placeholder="Email"><br><br>
+                <label for="lname"></label><br>
+                <textarea name="message" rows="10" cols="50" placeholder="Escriba su consulta aquí"></textarea>
+                <div><input type="submit" value="Enviar"></div>
+                <br><br>
+            </form>
+            <p><em>La información será enviada al correo de "Fractal Estudio"</em></p>
         </div>
+        <!-- INFORMACIÓN PRINCIPAL col  -->
         <div class="col-12 col-md-8  beige">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6">
-                    <img width="50px" height="auto" src="images/Trabajo.png" alt="Icono" />
-                    <h2>EXPERIENCIA LABORAL</h2>
+                    <h2><i class="fa-solid fa-helmet-safety"></i> /EXPERIENCIA LABORAL</h2>
                     <div class="row">
                         <div class="col">
-                            <h3>Estudio de arquitectura "Fractal Estudio" Abr. 2017 - Presente</h3>
-                            <h4>Fundador / Socio Propietario</h4>
-                            <p>Diseño / Proyecto / Dirección / Administración / Ejecución</p>
-                            <h4>Obras Realizadas:</h4>
+                            <h3><i class="fa-solid fa-pencil"></i> /Estudio de arquitectura "Fractal Estudio" Abr. 2017
+                                - Presente</h3>
+                            <p><strong>Fundador / Socio Propietario</strong></p>
+                            <p><em>Diseño / Proyecto / Dirección / Administración / Ejecución</em></p>
+
+                            <p><strong>Obras Realizadas:</strong></p>
                             <ul>
                                 <li><strong>Casa RP</strong>, Dos lagunas, Santa Fe, 2018.</li>
                             </ul>
                             <p>Proyecto / Dirección / Ejecución.</p>
-                            <details>
-                                <summary>Imágenes</summary>
-                                <img width="300" height="automatic" src="images/mas-buena1.png"
-                                    alt="Foto de perfil: Retrato de Alejandro Trucco" />
-                            </details>
+
                             <ul>
                                 <li><strong>Casa Urquiza</strong>, Santa Fe, 2018.</li>
                             </ul>
@@ -113,84 +120,93 @@
                                 <li><strong>Casa DB</strong>(Ampliación), Santo Tomé, 2021.</li>
                             </ul>
                             <p>Proyecto / Dirección / Ejecución.</p>
-                            <h3>Estudio de arquitectura Francisco Garrido & Asoc. 2017 (Ref. 0342 - 5501882)</h3>
-                            <ul>
-                                <li>Proyecto</li>
-                                <li>Seguimiento de Obra</li>
-                            </ul>
-                            <h3>Estudio de arquitectura Javier Mendiondo & Asoc. 2015 - 2016 (Ref. 0342 - 5350722)</h3>
-                            <ul>
-                                <li>Maquetación</li>
-                                <li>Renderizado</li>
-                                <li>Dibujo de Planos</li>
-                                <li>Proyecto</li>
-                                <li>Seguimiento de Obra</li>
-                            </ul>
-                            <h3>Taller de Proyecto Arquitectonico III y IV. Cátedra Arroyo. 2013 - 2015</h3>
-                            <ul>
-                                <li>Pasantía en docencia como ayudante alumno.</li>
-                            </ul>
+                            <h3><i class="fa-solid fa-pencil"></i> /Estudio de arquitectura Francisco Garrido & Asoc.
+                                2017 (Ref. 0342 - 5501882)</h3>
+                            <p><em>Diseño / Proyecto / Dirección / Administración / Ejecución</em></p>
+                            <h3><i class="fa-solid fa-pencil"></i> /Estudio de arquitectura Javier Mendiondo & Asoc.
+                                2015 - 2016 (Ref. 0342 - 5350722)</h3>
+                            <p><em>Maquetación / Renderizado / Dibujo de Planos / Proyecto / Seguimiento de Obra</em>
+                            </p>
+                            <h3><i class="fa-solid fa-pencil"></i> /Taller de Proyecto Arquitectonico III y IV. Cátedra
+                                Arroyo. 2013 - 2015 (Fadu - UNL)</h3>
+                            <p><em>Pasantía en docencia como ayudante alumno.</em></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <img width="50px" height="auto" src="images/Educacion.png" alt="Icono" />
-                    <h2>FORMACION COMPLEM</h2>
-                    <h3>2017 - CONCURSO CURADOR PARA EL PABELLON ARGENTINO EN LA BIENAL DE ARQUITECTURA DE VENECIA 2018.
-                    </h3>
-                    <h4>1er Premio</h4>
+                    <!-- INFORMACION PRINCIPAL col der -->
+                    <h2><i class="fa-solid fa-graduation-cap"></i> /FORMACIÓN COMPLEM.</h2>
+                    <h4><i class="fa-solid fa-trophy"></i> 2017 - CONCURSO CURADOR PARA EL PABELLON ARGENTINO EN LA
+                        BIENAL DE ARQUITECTURA DE VENECIA 2018.
+                    </h4>
+                    <details>
+                        <summary><strong>Primer Premio / </strong><i class="fa-solid fa-image"></i></summary>
+                        <img class="img-fluid" src="images/obras/Vertigo-horizontal-1.jpg"
+                            alt="Foto del proyecto premiado" />
+                        <img class="img-fluid" src="images/obras/Vertigo-horizontal-2.jpg"
+                            alt="Foto del proyecto premiado" />
+                    </details>
                     <p>Arqs: Francisco Garrido, Pablo Anzilutti, Javier Mendiondo, Federico Cairoli y asesores: Rodrigo
                         Bordiga,
                         Juan Juarez, Federico Viudez, Alejandro Trucco.</p>
-                    <h3>2017 - CONCURSO NACIONAL PARA LA AMPLIACION Y REMODELACION DEL MUSEO CASTAGNINO.</h3>
-                    <h4>Mención Honorífica.</h4>
+                    <h4><i class="fa-solid fa-award"></i> 2017 - CONCURSO NACIONAL PARA LA AMPLIACION Y REMODELACION DEL
+                        MUSEO CASTAGNINO.</h4>
+                    <details>
+                        <summary><strong>Mencion Honorífica / </strong><i class="fa-solid fa-image"></i></summary>
+                        <img class="img-fluid" src="images/obras/CMC1.jpeg" alt="Foto del proyecto premiado" />
+                        <img class="img-fluid" src="images/obras/CMC2.jpeg" alt="Foto del proyecto premiado" />
+                    </details>
                     <p>Arqs: Francisco Garrido, Pablo Anzilutti, Javier Mendiondo, Federico Cairoli y asesores: Rodrigo
                         Bordiga,
                         Juan Juarez, Federico Viudez, Alejandro Trucco.</p>
-                    <h3>2016 - CONCURSO NACIONAL DE IDEAS CENTRO CÍVICO DEL NORTE DE LA CIUDAD DE SANTA FE.</h3>
-                    <h4>1er Premio</h4>
+                    <h4><i class="fa-solid fa-trophy"></i> 2016 - CONCURSO NACIONAL DE IDEAS CENTRO CÍVICO DEL NORTE DE
+                        LA CIUDAD DE SANTA FE.</h4>
+                    <details>
+                        <summary><strong>Primer Premio / </strong><i class="fa-solid fa-image"></i></summary>
+                        <img class="img-fluid" src="images/obras/CCN1.jpg" alt="Foto del proyecto premiado" />
+                        <img class="img-fluid" src="images/obras/CCN2.jpg" alt="Foto del proyecto premiado" />
+                    </details>
                     <p>Arqs: Francisco Garrido, Pablo Anzilutti, Javier Mendiondo, Federico Cairoli y asesores: Rodrigo
                         Bordiga,
                         Juan Juarez, Federico Viudez, Alejandro Trucco.</p>
-                    <h3>2015 - WORKSHOP "PALA Y A LA BOLSA, VANGUARDIAS PARAGUAY", SEMINARIO "COLECTIVOS PARAGUAY.
-                        VANGUARDIAS AL
-                        BORDE".</h3>
+                    <h4>2015 - WORKSHOP "PALA Y A LA BOLSA, VANGUARDIAS PARAGUAY", SEMINARIO "COLECTIVOS PARAGUAY.
+                        VANGUARDIAS AL BORDE".</h4>
                     <p>CAPSF y Vuelta del Paraguayo, Santa Fe.</p>
-                    <h3>2015 - CONFERENCIA SEMINAROI "COLECTIVOS PARAGUAY - VANGUARDIAS AL BORDE".</h3>
+                    <h4>2015 - CONFERENCIA SEMINAROI "COLECTIVOS PARAGUAY - VANGUARDIAS AL BORDE".</h4>
                     <p>CAPSF y Vuelta del Paraguayo, Santa Fe.</p>
-                    <h3>2015 - TALLER VIRTUAL EN RED ARQUISUR, SEGUNDA EDICIÓN. "CIUDADES VULNERABLES, PROYECTO O
+                    <h4>2015 - TALLER VIRTUAL EN RED ARQUISUR, SEGUNDA EDICIÓN. "CIUDADES VULNERABLES, PROYECTO O
                         INCERTIDUMBRE
-                    </h3>
-                    <h4>Expositor</h4>
+                    </h4>
+                    <p><strong>Expositor</strong></p>
                     <p>FADU - UNL, Santa Fe.</p>
-                    <h3>2015 - XIX CONGRESO ARQUISUR. "CIUDADES VULNERABLES, PROYECTO O INCERTIDUMBRE</h3>
-                    <h4>Expositor</h4>
+                    <h4>2015 - XIX CONGRESO ARQUISUR. "CIUDADES VULNERABLES, PROYECTO O INCERTIDUMBRE</h4>
+                    <p><strong>Expositor</strong></p>
                     <p>FAU - UNLP, La Plata</p>
-                    <h3>2015 - MIEMBRO DEL CONSEJO DIRECTIVO DE LA FACULTAD DE ARQUITECTURA, DISEÑO Y URBANISMO</h3>
-                    <h4>Consejero Estudiantil</h4>
+                    <h4>2015 - MIEMBRO DEL CONSEJO DIRECTIVO DE LA FACULTAD DE ARQUITECTURA, DISEÑO Y URBANISMO</h4>
+                    <p><strong>Consejero Estudiantil</strong></p>
                     <p>FADU - UNL, Santa Fe.</p>
                     <div>
                     </div>
                 </div>
             </div>
             <div class="row blanco py-5">
+                <!-- INFORMACION COMPLEMENTARIA FOOTER -->
                 <div class="col-12 col-md-6">
-                    <img width="50px" height="auto" src="images/Educacion.png" alt="Icono" />
-                    <h2>IDIOMAS</h2>
-                    <h3>ESPAÑOL</h3>
+                    <h2><i class="fa-solid fa-earth-americas"></i> /IDIOMAS</h2>
+                    <h4>ESPAÑOL</h4>
                     <span>Nativo</span>
-                    <h3>INGLÉS</h3>
-                    <h3>Titulo:"Auxiliar Bilingüe" Ingles / Español</h3>
+                    <h4>INGLÉS</h4>
+                    <p><strong>Titulo:"Auxiliar Bilingüe" Ingles / Español</strong></p>
                     <p>Nivel Avanzado</p>
                     <p>Insituto Otorgante: Escuela de Educacion Media N° 3015 San Roque.</p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <h2>INFORMATICA</h2>
-                    <h3>Word, Excel.</h3>
+                    <h2><i class="fa-solid fa-computer"></i> /INFORMATICA</h2>
+                    <h4>Word, Excel.</h4>
                     <p>Nivel Avanzado</p>
-                    <h3>Autocad, Sketchup, Lumion, Photoshop.</h3>
+                    <h4>Autocad, Sketchup, Lumion, Photoshop.</h4>
                     <p>Nivel Avanzado</p>
-                    <h3>Archicad, Revit, Unreal Engine</h3>
+                    <h4>Archicad, Revit, Unreal Engine</h4>
                     <p>Nivel Básico</p>
                 </div>
             </div>

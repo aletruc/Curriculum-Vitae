@@ -99,3 +99,12 @@ grid-gap: 20px;
 .blanco {
   background-color: rgb(255, 255, 255);
 }
+div {
+  text-align: justify;
+}
+ul {
+  text-align: start;
+}
+h3 {
+  margin: 5;
+}
